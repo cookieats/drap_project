@@ -24,3 +24,23 @@ class ToDoDataBase {
     _myBox.put("TODOLIST", toDoList);
   }
 }
+class WeeklyDatabase{
+  List Weekly =[];
+
+  final _myBox = Hive.box('mybox');
+
+   // run this method if this is the 1st time ever opening this app
+  void createInitialData() {
+    Weekly = [
+      ["list your item", false],
+      
+    ];
+  }
+  void loadData() {
+    Weekly = _myBox.get("WEEKLY");
+  }
+   void updateDataBase() {
+    _myBox.put("WEEKLY", Weekly);
+  }
+
+}

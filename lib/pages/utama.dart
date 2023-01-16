@@ -100,11 +100,17 @@ class Utama extends StatelessWidget {
                           Menu(
                               icon: Icons.date_range,
                               text: 'Weekly Planner',
-                              onTap: () {}),
+                              onTap: () {Navigator.pushNamed(
+                                  context,
+                                  '/weekly',
+                                );}),
                           Menu(
                               icon: Icons.timelapse,
                               text: 'Pomodoro Timer',
-                              onTap: () {}),
+                              onTap: () {Navigator.pushNamed(
+                                  context,
+                                  '/pomodoro',
+                                );}),
                         ],
                       ),
                     ],

@@ -1,11 +1,14 @@
 import 'package:drap_project/pages/home_page.dart';
 import 'package:drap_project/pages/login.dart';
 import 'package:drap_project/pages/register.dart';
+import 'package:drap_project/pages/pomodoro.dart';
 import 'package:drap_project/pages/todoList.dart';
 import 'package:drap_project/pages/utama.dart';
+import 'package:drap_project/pages/weekly.dart';
+import 'package:drap_project/service/timerservice.dart';
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-import 'pages/landingPage.dart';
+import 'package:provider/provider.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
 
@@ -15,7 +18,11 @@ void main() async {
 
 // open box
 var box = await Hive.openBox('mybox');
-  runApp(const MyApp());
+  runApp(ChangeNotifierProvider<TimerService>(
+    create: (_) => TimerService(),
+    child :MyApp(),
+  )
+    );
 }
 
 class MyApp extends StatelessWidget {
@@ -41,6 +48,9 @@ class MyApp extends StatelessWidget {
         '/register': (context) => Register(),
         '/utama': (context) =>  Utama(),
         '/todo': (context) =>  todoList(),
+        '/weekly': (context) => Weekly(),
+        '/pomodoro': (context) => Pomodoro(),
+
  
       },
       initialRoute: '/',
