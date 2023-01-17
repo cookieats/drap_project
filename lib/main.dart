@@ -45,11 +45,11 @@ class MyApp extends StatelessWidget {
       
       routes: {
         '/': (context) => const Login(),
-        '/register': (context) => Register(),
+        '/register': (context) => const Register(),
         '/utama': (context) =>  Utama(),
-        '/todo': (context) =>  todoList(),
+        '/todo': (context) =>  const todoList(),
         '/weekly': (context) => Weekly(),
-        '/pomodoro': (context) => Pomodoro(),
+        '/pomodoro': (context) => const Pomodoro(),
 
  
       },

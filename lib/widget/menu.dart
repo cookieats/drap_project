@@ -22,18 +22,18 @@ class Menu extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Container(
-                padding: const EdgeInsets.all(12),
+                padding: const EdgeInsets.all(8),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(16),
                   color: Colors.white,
                 ),
-                child: Icon(icon, size: 50,),
+                child: Icon(icon, size: 30,),
               ),
               Container(
                 padding: EdgeInsets.all(12),
                 child: Text(
                   text,
-                  style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 30),
+                  style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 20),
                 ),
               )
             ],
