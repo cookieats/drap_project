@@ -1,5 +1,11 @@
 include ':app'
 
+dependencyResolutionManagement{
+    repositories{
+        maven { url "https://jitpack.io" }
+    }
+}
+
 def localPropertiesFile = new File(rootProject.projectDir, "local.properties")
 def properties = new Properties()
 
